@@ -1,7 +1,7 @@
 {
   "name": "harvest-monthly-expenses",
-  "version": "0.0.0",
-  "description": "Summarizes monthly expenses based on category",
+  "version": "0.1.0",
+  "description": "CLI to summarize monthly Harvest expenses based on category",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
