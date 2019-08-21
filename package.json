@@ -1,0 +1,21 @@
+{
+  "name": "harvest-monthly-expenses",
+  "version": "0.0.0",
+  "description": "Summarizes monthly expenses based on category",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "harvest-monthly-expenses": "bin/harvest-monthly-expenses"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "arg": "^4.1.1",
+    "csv-stringify": "^5.3.3",
+    "esm": "^3.2.25",
+    "harvest-v2": "^1.2.0",
+    "moment": "^2.24.0"
+  }
+}
