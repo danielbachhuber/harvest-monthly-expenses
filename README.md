@@ -1,8 +1,8 @@
 # Welcome to harvest-monthly-expenses 👋
 
-This is CLI to summarize monthly Harvest expenses based on category.
+Summarize your monthly Harvest expenses on the command line!
 
-Yes, you can do this in Excel. I decided to write some code instead.
+Yes, you can do this in Excel too. I decided to write some code instead.
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000)
 
