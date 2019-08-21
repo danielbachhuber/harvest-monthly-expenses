@@ -1,8 +1,8 @@
 # Welcome to harvest-monthly-expenses 👋
 
-CLI to summarize monthly Harvest expenses based on category.
+This is CLI to summarize monthly Harvest expenses based on category.
 
-Yes, you can do this in Excel too.
+Yes, you can do this in Excel. I decided to write some code instead.
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000)
 
@@ -14,7 +14,7 @@ To install, simply run:
 npm install harvest-monthly-expenses
 ```
 
-You'll also need to obtain a Harvest [Personal Access Token](https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/#personal-access-tokens).
+You'll also need to obtain a [Harvest Personal Access Token](https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/#personal-access-tokens).
 
 ## Usage
 
@@ -25,7 +25,7 @@ export HARVEST_ACCESS_TOKEN=<access-token>
 export HARVEST_ACCOUNT_ID=<account-id>
 ```
 
-By default, the current month's expenses will be displayed:
+By default, the current month's expenses are displayed:
 ```sh
 $ harvest-monthly-expenses
 Expense Category,August 2019
