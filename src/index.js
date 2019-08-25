@@ -33,7 +33,7 @@ export async function main(args) {
 
   // Fetch all of the expense categories to build our initial data model.
   // { Education: { '2019-08': '0.00', '2019-07': '0.00', '2019-06': '0.00' } }
-  let expenseSummaries = {};
+  const expenseSummariesUnsorted = {};
   const baseValues = {};
   const startDate = moment(requestArgs.from);
   let endDate = moment(requestArgs.to);
@@ -43,11 +43,15 @@ export async function main(args) {
   }
   await harvest.expenseCategories.list().then((response) =>{
     response.expense_categories.forEach((category) => {
-      expenseSummaries[category.name] = {...baseValues};
+      expenseSummariesUnsorted[category.name] = {...baseValues};
     });
   }).catch((response) => {
     console.error(response.message);
     process.exit(1);
+  });
+  const expenseSummaries = {};
+  Object.keys(expenseSummariesUnsorted).sort().forEach(function(key) {
+    expenseSummaries[key] = expenseSummariesUnsorted[key];
   });
 
   // Fetch all of the expenses for the date period.
