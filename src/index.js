@@ -37,9 +37,14 @@ export async function main(args) {
   const baseValues = {};
   const startDate = moment(requestArgs.from);
   let endDate = moment(requestArgs.to);
+  let year = endDate.format('YYYY');
   while (endDate.isAfter(startDate)) {
     baseValues[endDate.format('MMMM YYYY')] = 0.00;
     endDate.subtract(1, 'month');
+    if (endDate.format('YYYY') !== year) {
+      baseValues['All ' + year] = 0.00;
+      year = endDate.format('YYYY');
+    }
   }
   await harvest.expenseCategories.list().then((response) =>{
     response.expense_categories.forEach((category) => {
@@ -71,7 +76,9 @@ export async function main(args) {
   // Add each expense to the monthly summary.
   expenses.forEach((expense) => {
     const expenseMonth = moment(expense.spent_date).format('MMMM YYYY');
+    const expenseYear = moment(expense.spent_date).format('YYYY');
     expenseSummaries[expense.expense_category.name][expenseMonth] += expense.total_cost;
+    expenseSummaries[expense.expense_category.name]['All ' + expenseYear] += expense.total_cost;
   });
 
   // Build rows for the CSV.
