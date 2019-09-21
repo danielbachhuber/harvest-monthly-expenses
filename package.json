@@ -1,6 +1,6 @@
 {
   "name": "harvest-monthly-expenses",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Summarize your monthly Harvest expenses on the command line!",
   "main": "src/index.js",
   "scripts": {

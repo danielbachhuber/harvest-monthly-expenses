@@ -47,6 +47,8 @@ Subscriptions,$0.00,$14.95,$280.00
 Contractors,$0.00,$0.00,$0.00
 ```
 
+Or, filter expenses to a specific client with the `--client-id=<id>` argument.
+
 ## Author
 
 👤 **Daniel Bachhuber**

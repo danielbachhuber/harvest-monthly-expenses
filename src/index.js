@@ -7,7 +7,8 @@ function processArgs(rawArgs){
   const args = arg(
     {
       '--start-date': String,
-      '--end-date': String
+      '--end-date': String,
+      '--client-id': String
     },
     {
       argv: rawArgs.slice(2)
@@ -30,6 +31,9 @@ export async function main(args) {
     'to': args['--end-date'] || (new Date()).toISOString(),
     'page': 1
   };
+  if ( args['--client-id'] ) {
+    requestArgs['client_id'] = args['--client-id'];
+  }
 
   // Fetch all of the expense categories to build our initial data model.
   // { Education: { '2019-08': '0.00', '2019-07': '0.00', '2019-06': '0.00' } }
