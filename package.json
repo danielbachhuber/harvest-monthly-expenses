@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "arg": "^5.0.0",
-    "csv-stringify": "^5.3.3",
+    "csv-stringify": "^6.0.1",
     "esm": "^3.2.25",
     "harvest-v2": "^3.0.0",
     "moment": "^2.24.0"
